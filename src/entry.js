@@ -10,6 +10,7 @@ try {
   console.error('Nie udało się uruchomić atelier.',error);
   const loader=document.querySelector('#scene-loader');
   if(loader){
+    loader.style.pointerEvents='auto';
     loader.replaceChildren();
     const message=document.createElement('p');
     message.textContent='Nie udało się otworzyć podglądu 3D. Odśwież stronę, aby spróbować ponownie.';
