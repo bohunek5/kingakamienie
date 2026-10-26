@@ -1,0 +1,68 @@
+body.access-locked {
+  margin: 0;
+  background: #fff;
+  color: #294b3b;
+}
+
+body.access-locked #atelier-app { display: none !important; }
+
+.access-gate,
+.access-gate * { box-sizing: border-box; }
+
+.access-gate {
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  width: 100%;
+  padding: max(36px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(32px, 5vh, 64px);
+  background: #fff;
+  color: #294b3b;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.access-brand { display: flex; flex-direction: column; align-items: center; gap: 7px; }
+.access-brand-name { font-family: Georgia, "Times New Roman", serif; font-size: 42px; line-height: 1; letter-spacing: .035em; }
+.access-brand-name > span { color: #aa8b52; }
+.access-brand-detail { font-size: 8px; line-height: 1.5; letter-spacing: .38em; padding-left: .38em; }
+.access-panel { width: min(100%, 370px); text-align: center; }
+.access-stone { display: block; margin: 0 auto 25px; }
+.access-eyebrow { margin: 0 0 13px; color: #727b6c; font-size: 9px; font-weight: 500; line-height: 1.5; letter-spacing: .24em; }
+.access-panel h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(25px, 6.1vw, 29px); font-weight: 400; line-height: 1.25; letter-spacing: -.035em; text-wrap: balance; }
+.access-intro { margin: 15px 0 31px; color: #777e73; font-size: 12px; line-height: 1.7; }
+.access-form { text-align: left; }
+.access-label { display: block; margin-bottom: 9px; font-size: 12px; line-height: 1.5; }
+.access-input-wrap { position: relative; }
+.access-input-wrap input { width: 100%; height: 54px; margin: 0; padding: 12px 58px 12px 15px; border: 1px solid #d9dfd4; border-radius: 2px; background: #fff; color: #294b3b; font-family: inherit; font-size: 16px; line-height: 1.4; box-shadow: none; outline: none; -webkit-appearance: none; appearance: none; transition: border-color .15s ease, box-shadow .15s ease; }
+.access-input-wrap input:focus { border-color: #6a826d; box-shadow: 0 0 0 3px #eaf0e9; }
+.access-input-wrap input[aria-invalid="true"] { border-color: #a76a57; }
+.access-input-wrap input[aria-invalid="true"]:focus { box-shadow: 0 0 0 3px #f7efeb; }
+.access-reveal { position: absolute; top: 4px; right: 5px; width: 46px; height: 46px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 2px; background: transparent; color: #768474; cursor: pointer; touch-action: manipulation; }
+.access-reveal svg { width: 22px; height: 22px; }
+.access-reveal:hover { background: #f4f7f2; color: #294b3b; }
+.access-reveal:focus-visible { outline: 2px solid #8a9e85; outline-offset: 1px; }
+.access-eye-slash { opacity: 0; }
+.access-reveal[aria-pressed="true"] .access-eye-slash { opacity: 1; }
+.access-error { min-height: 32px; margin: 7px 0 7px; color: #975342; font-size: 12px; line-height: 1.5; }
+.access-submit { width: 100%; min-height: 53px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 18px; border: 1px solid #254c3c; border-radius: 2px; background: #254c3c; color: #fff; font-family: inherit; font-size: 12px; font-weight: 500; line-height: 1.5; cursor: pointer; touch-action: manipulation; transition: background .15s ease, border-color .15s ease; }
+.access-submit svg { width: 21px; height: 21px; flex-shrink: 0; }
+.access-submit:hover { border-color: #173b2c; background: #173b2c; }
+.access-submit:focus-visible { outline: 2px solid #a58b58; outline-offset: 4px; }
+.access-submit:disabled { cursor: wait; opacity: .75; }
+.access-signature { margin: 0; color: #8b927f; font-family: Georgia, "Times New Roman", serif; font-size: 12px; font-style: italic; line-height: 1.6; }
+
+@media (max-height: 720px) {
+  .access-gate { justify-content: flex-start; gap: 24px; padding-top: max(25px, env(safe-area-inset-top)); }
+  .access-brand-name { font-size: 35px; }
+  .access-stone { width: 44px; height: 56px; margin-bottom: 18px; }
+  .access-intro { margin-top: 12px; margin-bottom: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .access-gate * { transition: none !important; }
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Kinga Kamienie — jubilerskie atelier 3D. 52 kamienie i materiały, kolekcja kosmiczna i biżuteria zaprojektowana przez Ciebie." />
+    <meta name="apple-mobile-web-app-title" content="Kinga Kamienie" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>Kinga Kamienie — Atelier 3D</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b3d32'/%3E%3Cpath d='M23 12h18l9 10v20l-9 10H23l-9-10V22z' fill='none' stroke='%23d8c49e' stroke-width='2'/%3E%3Cpath d='M25 24h14M25 32h11M25 40h14M25 24v16' fill='none' stroke='%23d8c49e' stroke-width='2'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div id="atelier-app" hidden>
+    <a class="skip-link" href="#configuration">Przejdź do konfiguratora</a>
+    <header class="site-header">
+      <a class="wordmark" href="./" aria-label="Kinga Kamienie, strona główna"><span>KINGA<span class="wordmark-dot">.</span></span><small>K A M I E N I E</small></a>
+      <div class="header-caption">BIŻUTERIA W TWOJEJ FORMIE</div>
+      <div class="header-actions"><button class="header-save" data-action="save" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v16l-5-3-5 3V4Z" /></svg><span>Zapisz projekt</span></button><button type="button" class="header-lock" id="lock-atelier" aria-label="Zablokuj atelier" title="Zablokuj atelier"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v3"/></svg></button></div>
+    </header>
+    <main class="atelier">
+      <section class="gallery" aria-label="Interaktywny model kolczyka 3D">
+        <div class="gallery-heading"><span class="eyebrow">STUDIUM KAMIENIA / NO. 01</span><h1>Mały detal.<br /><em>Cały blask.</em></h1><p>Zaprojektowany przez Ciebie.</p></div>
+        <div class="scene-status"><span class="status-dot"></span><span id="scene-status-text">PRZYGOTOWUJEMY ATELIER</span></div>
+        <div id="viewport" tabindex="0" role="img" aria-label="Model kolczyka. Przeciągnij, aby obrócić. Użyj kółka myszy, aby przybliżyć."></div>
+        <div id="scene-loader" class="scene-loader"><div class="loader-gem"><i></i></div><span>Jeszcze chwila światła…</span></div>
+        <div class="scene-orientation" aria-label="Widok modelu"><button type="button" data-action="front" title="Widok z przodu" aria-label="Widok z przodu">Przód</button><span></span><button type="button" data-action="side" title="Widok z boku" aria-label="Widok z boku">Profil</button><span></span><button type="button" data-action="back" title="Widok z tyłu" aria-label="Widok z tyłu">Tył</button><span></span><button type="button" data-action="macro" title="Zbliżenie kamienia" aria-label="Zbliżenie makro kamienia">Makro</button></div>
+        <div class="gallery-bottom">
+          <div class="model-caption"><span class="caption-line"></span><span id="model-summary">Szmaragd · żółte złoto</span><span class="caption-index">01 / 06</span></div>
+          <div class="scene-toolbar" role="group" aria-label="Narzędzia podglądu">
+            <button class="tool-button" data-toggle="rotation" type="button" aria-pressed="false" title="Automatyczny obrót"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.4 6M20 5v6h-6" /></svg><span>Obrót</span></button>
+            <button class="tool-button" data-toggle="pair" type="button" aria-pressed="false" title="Pokaż parę kolczyków"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="7" height="10" rx="2"/><rect x="14" y="6" width="7" height="10" rx="2"/><path d="M6.5 5v3m11-5v3"/></svg><span>Para</span></button>
+            <button class="tool-button" data-toggle="exploded" type="button" aria-pressed="false" title="Rozsuń kamień i oprawę"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4-8 4-8-4 8-4Zm-8 9 8 4 8-4M4 17l8 4 8-4" /></svg><span>Konstrukcja</span></button>
+            <button class="tool-button" data-toggle="dimensions" type="button" aria-pressed="false" title="Pokaż wymiary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 18 4l3 3L7 21l-3-3ZM8 14l2 2m2-6 2 2m2-6 2 2"/></svg><span>Wymiary</span></button>
+            <span class="toolbar-divider"></span><button class="tool-button reset-view" data-action="reset-camera" type="button" title="Przywróć widok" aria-label="Przywróć widok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/><circle cx="12" cy="12" r="3"/></svg></button>
+          </div>
+          <div class="scene-help"><span>Przeciągnij, aby obrócić</span><i></i><span>Przybliż i odkryj detale</span></div>
+        </div>
+      </section>
+      <aside class="configuration" id="configuration" aria-label="Konfiguracja kolczyka">
+        <div class="configuration-intro"><div class="collection-label"><span>TWÓJ PROJEKT</span><span class="collection-mark">✧</span></div><h2>Kolczyk <em>Émera</em></h2><p>Kamień, oprawa, proporcje.<br />Każdy wybór nadaje mu charakter.</p></div>
+        <div id="configuration-controls"></div>
+        <div class="project-details"><div><span>WYMIAR KAMIENIA</span><strong id="detail-dimensions">10 × 7,2 mm</strong></div><div><span>SZLIF</span><strong id="detail-cut">Szmaragdowy</strong></div></div>
+        <div class="export-actions"><button class="primary-button" type="button" data-action="screenshot"><span>Zapisz ujęcie</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"/></svg></button><button class="text-button" type="button" data-action="export">Pobierz model 3D <span>GLB ↗</span></button></div>
+        <div class="project-links"><button data-action="load" type="button">Otwórz projekt</button><span>·</span><button data-action="reset" type="button">Zacznij od nowa</button></div>
+      </aside>
+    </main>
+    <footer class="site-footer"><span>KINGA KAMIENIE</span><span>Światło. Forma. Twój detal.</span><span>INTERAKTYWNE STUDIUM BIŻUTERII</span></footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </div>
+    <noscript>Włącz JavaScript, aby otworzyć atelier Kinga Kamienie.</noscript>
+    <script type="module" src="/src/entry.js"></script>
+  </body>
+</html>

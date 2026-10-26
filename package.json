@@ -1,0 +1,9 @@
+{
+  "name": "kingakamienie",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"dev": "vite --host 127.0.0.1 --port 5173 --strictPort", "build": "vite build --base=/kingakamienie/", "preview": "vite preview --base=/kingakamienie/ --host 127.0.0.1 --port 5174 --strictPort", "test":"node tests/geometry.mjs"},
+  "dependencies": {"three": "^0.180.0", "three-mesh-bvh": "^0.9.1"},
+  "devDependencies": {"vite": "^7.1.7"}
+}
